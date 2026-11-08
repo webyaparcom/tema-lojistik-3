@@ -1,0 +1,44 @@
+{
+  "name": {
+    "tr": "Misyon",
+    "en": "Mission",
+    "ar": "المهمة"
+  },
+  "status": "play",
+  "id": "misyon",
+  "path": "misyon",
+  "category": "",
+  "text": {
+    "tr": "<h2>Misyonumuz</h2>\n<p>Misyonumuz, yükleri zamanında, güvenle ve yazılı taahhütle ulaştırmaktır.</p>",
+    "en": "<h2>Our mission</h2>\n<p>Our mission is to deliver cargo on time, safely and under written commitment.</p>",
+    "ar": "<h2>مهمتنا</h2>\n<p>مهمتنا إيصال الشحنات في موعدها وبأمان وبالتزام مكتوب.</p>"
+  },
+  "desing": {
+    "header": [],
+    "body": [
+      "448pg9",
+      "d44g2v"
+    ],
+    "footer": []
+  },
+  "desc": {},
+  "index": 1,
+  "icon": "home",
+  "title": {
+    "tr": "Misyon",
+    "en": "Mission",
+    "ar": "المهمة"
+  },
+  "description": {
+    "tr": "Misyonumuz",
+    "en": "Our mission",
+    "ar": "مهمتنا"
+  },
+  "keyword": {
+    "tr": "",
+    "en": "",
+    "ar": ""
+  },
+  "update": "2026-10-31T15:01:27.328Z",
+  "date": "2026-05-19"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "bpt30f3m6q",
+  "name": {
+    "tr": "Galeri",
+    "en": "Gallery",
+    "ar": "المعرض"
+  },
+  "description": {
+    "tr": "Araç filosu ve depodan görüntüler; temsilidir.",
+    "en": "Views of the fleet and the warehouse; illustrative.",
+    "ar": "صور من الأسطول والمستودع؛ توضيحية."
+  },
+  "keyword": {
+    "tr": "galeri, fotoğraf",
+    "en": "gallery, photos",
+    "ar": "معرض، صور"
+  },
+  "path": "galeri",
+  "icon": "photo_library",
+  "category": "",
+  "status": "play",
+  "desing": {
+    "header": [],
+    "body": [
+      "7hvvgr"
+    ],
+    "footer": []
+  },
+  "index": 3,
+  "url": "",
+  "text": {},
+  "title": {
+    "tr": "Galeri",
+    "en": "Gallery",
+    "ar": "المعرض"
+  },
+  "date": "2026-10-31T14:46:07.672Z",
+  "update": "2026-10-31T15:01:27.299Z"
+}

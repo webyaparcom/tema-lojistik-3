@@ -1,0 +1,41 @@
+{
+  "name": {
+    "tr": "Hakkımızda",
+    "en": "About",
+    "ar": "من نحن"
+  },
+  "status": "pause",
+  "id": "hakkimizda",
+  "path": "hakkimizda",
+  "category": "",
+  "text": {
+    "tr": "Kervan Ekspres, yazılı teklif ve açık yetki bilgisiyle çalışan kurgusal bir demo lojistik firmasıdır. Bu sitedeki belge numaraları, adresler ve araç bilgileri kurgusaldır.",
+    "en": "Kervan Express is a fictional demo logistics company that works with written quotes and clear authorisation details. Licence numbers, addresses and fleet details on this site are fictional.",
+    "ar": "كروان إكسبرس شركة تجريبية افتراضية تعمل بعروض مكتوبة وبيانات ترخيص واضحة. أرقام التراخيص والعناوين وبيانات الأسطول في هذا الموقع افتراضية."
+  },
+  "desing": {
+    "header": [],
+    "body": [
+      "t4in01",
+      "t4pd01",
+      "t4ca01"
+    ],
+    "footer": []
+  },
+  "desc": {},
+  "index": 0,
+  "icon": "home",
+  "title": {
+    "tr": "Hakkımızda",
+    "en": "About",
+    "ar": "من نحن"
+  },
+  "description": {
+    "tr": "Hakkımızda",
+    "en": "About",
+    "ar": "من نحن"
+  },
+  "keyword": {},
+  "update": "2026-10-31T15:01:27.326Z",
+  "date": "2026-05-19"
+}
