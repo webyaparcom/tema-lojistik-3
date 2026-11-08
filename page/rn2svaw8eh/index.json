@@ -1,0 +1,41 @@
+{
+  "id": "rn2svaw8eh",
+  "name": {
+    "tr": "Hizmetlerimiz",
+    "en": "Services",
+    "ar": "خدماتنا"
+  },
+  "description": {
+    "tr": "Yükünüzün büyüklüğüne ve güzergâhına göre çözümler.",
+    "en": "Solutions by the size and route of your cargo.",
+    "ar": "حلول بحسب حجم شحنتك ومسارها."
+  },
+  "keyword": {
+    "tr": "lojistik, nakliye, depolama, taşımacılık",
+    "en": "logistics, freight, warehousing, transport",
+    "ar": "لوجستيات، شحن، تخزين، نقل"
+  },
+  "path": "hizmetlerimiz",
+  "icon": "local_shipping",
+  "category": "",
+  "status": "play",
+  "desing": {
+    "header": [],
+    "body": [
+      "835bn9",
+      "amia5f",
+      "d44g2v"
+    ],
+    "footer": []
+  },
+  "index": 0,
+  "url": "",
+  "text": {},
+  "title": {
+    "tr": "Hizmetlerimiz",
+    "en": "Services",
+    "ar": "خدماتنا"
+  },
+  "date": "2026-10-31T14:46:07.661Z",
+  "update": "2026-10-31T15:01:27.293Z"
+}

@@ -1,0 +1,29 @@
+{
+  "name": "Kervan Ekspres",
+  "short_name": "Kervan Ekspr",
+  "description": "Kervan Ekspres: parsiyel ve komple nakliye, kargo-kurye, depolama ve evden eve taşıma; teklif talebi ve yetki belgeleri. (Demo site)",
+  "start_url": "/tr/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#A14807",
+  "lang": "tr",
+  "icons": [
+    {
+      "src": "/img/icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/img/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/img/icon.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "id": "tahlcc7ny1",
+  "name": {
+    "tr": "Belgelerimiz",
+    "en": "Our Licences",
+    "ar": "تراخيصنا"
+  },
+  "description": {
+    "tr": "Yetki belgesi türleri, posta yetkisi, taşınamayacak ürünler ve cayma hakkı istisnası.",
+    "en": "Licence types, postal authorisation, items we do not carry and the withdrawal exception.",
+    "ar": "أنواع التراخيص والترخيص البريدي والأصناف غير المنقولة واستثناء حق العدول."
+  },
+  "keyword": {
+    "tr": "belgeler, yetki",
+    "en": "licences, authorisation",
+    "ar": "تراخيص، تفويض"
+  },
+  "path": "belgelerimiz",
+  "icon": "verified",
+  "category": "",
+  "status": "play",
+  "desing": {
+    "header": [],
+    "body": [
+      "448pg9"
+    ],
+    "footer": []
+  },
+  "index": 2,
+  "url": "",
+  "text": {
+    "tr": "<h2>Belgelerimiz</h2><p>Yetki belgeleri: K1 (karayolu eşya taşımacılığı) · L1 (lojistik) · Posta hizmetleri yetkilendirmesi — hepsi DEMO numaralıdır (kurgusal).</p><p>Kargo ve posta hizmetleri 6475 sayılı Posta Hizmetleri Kanunu kapsamındadır; yetki bilgisi her teklifte yazılır.</p><p>Belirli bir tarihte yapılacak evden eve taşıma ve eşya taşıma hizmetlerinde cayma hakkı bulunmaz (6502 sayılı Kanun md. 15/g); iptal ve değişiklik koşulları sözleşmede yazılıdır.</p><p><strong>Taşınamayacak ürünler:</strong> yanıcı-parlayıcı maddeler, yasaklı ve tehlikeli maddeler, canlı hayvan ve nakit para taşınmaz.</p><p><em>Demo sitedir; numaralar örnektir.</em></p>",
+    "en": "<h2>Our licences</h2><p>Authorisations: K1 (road freight) · L1 (logistics) · postal services authorisation — all with DEMO numbers (fictional).</p><p>Parcel and postal services fall under Postal Services Law No. 6475; the authorisation details appear on every quote.</p><p>There is no right of withdrawal for home-moving and goods-transport services to be performed on a specific date (Law No. 6502 art. 15/g); cancellation and change terms are in the contract.</p><p><strong>Items we do not carry:</strong> flammable materials, prohibited and hazardous materials, live animals and cash.</p><p><em>This is a demo site; the numbers are examples.</em></p>",
+    "ar": "<h2>تراخيصنا</h2><p>التراخيص: K1 (النقل البري للبضائع) · L1 (اللوجستيات) · ترخيص الخدمات البريدية — جميعها بأرقام DEMO (افتراضية).</p><p>تدخل خدمات الطرود والبريد ضمن قانون الخدمات البريدية رقم 6475، وتُذكر بيانات الترخيص في كل عرض سعر.</p><p>لا يوجد حق عدول في خدمات نقل الأثاث والبضائع المحددة بتاريخ معيّن (المادة 15/ز من القانون التركي رقم 6502)؛ وشروط الإلغاء والتعديل مذكورة في العقد.</p><p><strong>أصناف لا ننقلها:</strong> المواد القابلة للاشتعال والمواد المحظورة والخطرة والحيوانات الحية والنقد.</p><p><em>هذا موقع تجريبي والأرقام أمثلة.</em></p>"
+  },
+  "title": {
+    "tr": "Belgelerimiz",
+    "en": "Our Licences",
+    "ar": "تراخيصنا"
+  },
+  "date": "2026-10-31T14:46:07.664Z",
+  "update": "2026-10-31T15:01:27.295Z"
+}

@@ -1,0 +1,58 @@
+{
+  "order": false,
+  "user": false,
+  "description": {
+    "tr": "Kervan Ekspres: parsiyel ve komple nakliye, kargo-kurye, depolama ve evden eve taşıma; teklif talebi ve yetki belgeleri. (Demo site)",
+    "en": "Kervan Express: part-load and full-load freight, parcel-courier, warehousing and home moves; quote requests and licences. (Demo site)",
+    "ar": "كروان إكسبرس: نقل جزئي وكامل وطرود وبريد سريع وتخزين ونقل أثاث مع طلب عرض سعر وتراخيص. (موقع تجريبي)"
+  },
+  "keyword": {
+    "tr": "lojistik, nakliye, depolama, taşımacılık",
+    "en": "logistics, freight, warehousing, transport",
+    "ar": "لوجستيات، شحن، تخزين، نقل"
+  },
+  "category": "Kurumsal",
+  "name": "Kervan Ekspres",
+  "domain": "lojistik-3.webyapar.com",
+  "langs": {
+    "tr": true,
+    "en": true,
+    "ar": true,
+    "de": false,
+    "ru": false,
+    "es": false,
+    "fr": false,
+    "it": false,
+    "ja": false,
+    "zh": false,
+    "ko": false,
+    "pt": false
+  },
+  "logo": "logo.png",
+  "multi": false,
+  "icon": "icon.png",
+  "theme_color": "#A14807",
+  "publishMode": "static",
+  "font": {
+    "body": "nunito-sans",
+    "heading": "poppins",
+    "ar": {
+      "body": "ibm-plex-sans-arabic",
+      "heading": "noto-kufi-arabic"
+    }
+  },
+  "phone": "+90 342 000 00 00",
+  "email": "teklif@kervanekspres.example",
+  "colorScheme": "auto",
+  "seo": {
+    "noindex": true
+  },
+  "cssTokens": {
+    "--mx-radius-sm": "13px",
+    "--mx-radius-md": "22px",
+    "--mx-radius-lg": "31px",
+    "--mx-radius-xl": "42px",
+    "--mx-shadow-md": "0 24px 60px rgba(180,83,9,.16)",
+    "--mx-dur": "280ms"
+  }
+}

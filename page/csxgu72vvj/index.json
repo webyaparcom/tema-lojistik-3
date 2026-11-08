@@ -1,0 +1,39 @@
+{
+  "id": "csxgu72vvj",
+  "name": {
+    "tr": "Teklif Al",
+    "en": "Get a Quote",
+    "ar": "اطلب عرض سعر"
+  },
+  "description": {
+    "tr": "Hizmeti ve uygun günü seçin; talebiniz bu demo sitede yalnızca tarayıcınızda oluşturulur. Fiyat, yazılı teklifle iletilir.",
+    "en": "Choose the service and a convenient day; on this demo site your request is created only in your browser. The price is sent in a written quote.",
+    "ar": "اختر الخدمة واليوم المناسب؛ يُنشأ طلبك في متصفحك فقط. يُرسَل السعر في عرض مكتوب."
+  },
+  "keyword": {
+    "tr": "lojistik, nakliye, depolama, taşımacılık",
+    "en": "logistics, freight, warehousing, transport",
+    "ar": "لوجستيات، شحن، تخزين، نقل"
+  },
+  "path": "teklif-al",
+  "icon": "request_quote",
+  "category": "",
+  "status": "play",
+  "desing": {
+    "header": [],
+    "body": [
+      "h4tkjd"
+    ],
+    "footer": []
+  },
+  "index": 1,
+  "url": "",
+  "text": {},
+  "title": {
+    "tr": "Teklif Al",
+    "en": "Get a Quote",
+    "ar": "اطلب عرض سعر"
+  },
+  "date": "2026-10-31T14:46:07.667Z",
+  "update": "2026-10-31T15:01:27.297Z"
+}
