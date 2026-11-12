@@ -558,16 +558,16 @@
         },
         "icon2": "description",
         "name3": {
-          "tr": "Güvenli yük",
-          "en": "Safe cargo",
-          "ar": "شحنة آمنة"
+          "tr": "Kayıtlı teslim",
+          "en": "Documented delivery",
+          "ar": "تسليم موثّق"
         },
         "spot3": {
-          "tr": "Yük sigortası ve teslim tutanağı standarttır.",
-          "en": "Cargo insurance and a delivery note are standard.",
-          "ar": "تأمين الشحنة ومحضر التسليم أمران قياسيان."
+          "tr": "Sigorta kapsamı ve teslim tutanağı teklifte açıkça yazılır.",
+          "en": "Insurance cover and the delivery note are stated clearly in the quote.",
+          "ar": "يُذكر نطاق التأمين ومحضر التسليم بوضوح في العرض."
         },
-        "icon3": "shield",
+        "icon3": "task_alt",
         "img": "lojistik-3-kamyonet.webp",
         "bgcolor": "var(--mx-site-surface-2, #ececea)",
         "fontcolor": "var(--mx-site-text, #1b1b1b)",
@@ -1783,7 +1783,7 @@
             "ar": "جزئي · كامل · طرود"
           },
           "title": {
-            "tr": "Yük yola çıkar, siz takipte kalırsınız",
+            "tr": "Yük yola çıkar, siz haberdar kalırsınız",
             "en": "Your cargo moves, you stay informed",
             "ar": "تنطلق شحنتك وتبقى أنت على اطلاع"
           },
@@ -1932,14 +1932,14 @@
         },
         {
           "baslik": {
-            "tr": "Güvenli yük",
-            "en": "Safe cargo",
-            "ar": "شحنة آمنة"
+            "tr": "Kayıtlı teslim",
+            "en": "Documented delivery",
+            "ar": "تسليم موثّق"
           },
           "metin": {
-            "tr": "Yük sigortası ve teslim tutanağı standarttır.",
-            "en": "Cargo insurance and a delivery note are standard.",
-            "ar": "تأمين الشحنة ومحضر التسليم أمران قياسيان."
+            "tr": "Sigorta kapsamı ve teslim tutanağı teklifte açıkça yazılır.",
+            "en": "Insurance cover and the delivery note are stated clearly in the quote.",
+            "ar": "يُذكر نطاق التأمين ومحضر التسليم بوضوح في العرض."
           },
           "img": "lojistik-3-kamyonet.webp",
           "alt": {
@@ -2159,7 +2159,7 @@
             "en": "Price, timing and authorisation details are sent in writing.",
             "ar": "يُرسَل السعر والمدة وبيانات الترخيص كتابةً."
           },
-          "ikon": "draw"
+          "ikon": "request_quote"
         },
         {
           "no": 3,
@@ -2173,7 +2173,7 @@
             "en": "The cargo is checked and the documents are prepared.",
             "ar": "تُفحص الشحنة وتُجهَّز المستندات."
           },
-          "ikon": "construction"
+          "ikon": "local_shipping"
         },
         {
           "no": 4,
@@ -2187,7 +2187,7 @@
             "en": "The cargo is handed to the receiver with a delivery note.",
             "ar": "تُسلَّم الشحنة إلى المستلم بمحضر تسليم."
           },
-          "ikon": "verified"
+          "ikon": "task_alt"
         }
       ],
       "id": "amia5f",
@@ -2249,7 +2249,7 @@
       },
       "data": [
         {
-          "name": "Delta Gida",
+          "name": "Delta Gıda",
           "img": "",
           "url": ""
         },
@@ -2269,7 +2269,7 @@
           "url": ""
         },
         {
-          "name": "Atlas Tarim",
+          "name": "Atlas Tarım",
           "img": "",
           "url": ""
         },
@@ -2384,7 +2384,7 @@
             "en": "Purchasing · food",
             "ar": "مشتريات · أغذية"
           },
-          "company": "Delta Gida",
+          "company": "Delta Gıda",
           "text": {
             "tr": "Parsiyel hatta haftalık düzen kurduk; teslim tutanağı her seferinde aynı gün elimizde.",
             "en": "We set up a weekly rhythm on the part-load line; the delivery note reaches us the same day every time.",
@@ -2691,14 +2691,14 @@
         "nlGonderim": "mailto",
         "nlEmail": "teklif@kervanekspres.example",
         "nlTitle": {
-          "tr": "Gelişmelerden haberdar olun",
-          "en": "Stay in the loop",
-          "ar": "ابقَ على اطلاع"
+          "tr": "Hat ve tarife duyuruları",
+          "en": "Route and schedule updates",
+          "ar": "مستجدات الخطوط والجداول"
         },
         "nlText": {
-          "tr": "Ayda bir bülten; kampanya ve yeniliklerden ilk siz haberdar olun.",
-          "en": "One newsletter a month; be the first to hear about offers and news.",
-          "ar": "نشرة واحدة شهريًا؛ كن أول من يعرف بالعروض والمستجدات."
+          "tr": "Sefer ve tarife değişikliklerinden haberdar olmak için e-posta bırakın. Bu demo sitede veri saklanmaz.",
+          "en": "Leave your e-mail to hear about route and schedule changes. No data is stored on this demo site.",
+          "ar": "اترك بريدك الإلكتروني لتصلك تغييرات الرحلات والجداول. لا تُحفظ أي بيانات في هذا الموقع التجريبي."
         },
         "nlLabel": {
           "tr": "E-posta adresiniz",
