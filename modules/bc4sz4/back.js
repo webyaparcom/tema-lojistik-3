@@ -1,68 +1,64 @@
-/* stats-2 — sunucu tarafı: sayaçları dile çözer, son değeri biçimli basar; yer tutucular: s2class s2head s2items.
-   Veri: json.data[] = [{deger, onek, sonek, ondalik?, etiket{}, aciklama{}, ikon?}] */
-var s2Des = json.desing || {};
-var s2Lang = json.lang || "tr";
+/* sayac-dev — Dev tipografik sayaçlar (15 Kas 2026, G4 · mcp:webmaker/20261115-202337-k60m · D17–D18).
+   Yer tutucular: sdvsinif sdvust sdvbaslik sdvmetin sdvsayilar sdvetiket.
+   data: [{ sayi, onek?, sonek?, etiket, aciklama? }] — sayi sayı (123 · 4.5 · "1200"); etiket/aciklama/onek/sonek dil sözlüğü.
+   Sunucu son değeri sayfa diliyle biçimlenmiş basar (Intl — SEO / JS'siz doğru); istemci görünür olunca 0'dan sayar (reduced-motion'da saymaz).
+   Veri yoksa blok basılmaz. */
+const pick = (v) => {
+  if (v == null) return "";
+  if (typeof v !== "object") return String(v);
+  if (typeof wmPickLang === "function") { try { return wmPickLang(v, json.lang) || ""; } catch (e) { /* alt satır */ } }
+  return String(v[json.lang] ?? Object.values(v)[0] ?? "");
+};
+const esc = (s) => String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+const medyaUrl = (v) => {
+  const s = String(v ?? "").trim();
+  if (!s || /^\s*(javascript|vbscript|file):/i.test(s)) return "";
+  if (/^data:/i.test(s)) return /^data:(image|video|audio)\//i.test(s) ? s : "";
+  if (s.startsWith("/") || /^https?:\/\//i.test(s)) return s;
+  return `/img/${s}`;
+};
+const href = (v) => {
+  const s = String(v ?? "").trim();
+  if (!s || /^\s*(javascript|vbscript|data):/i.test(s)) return "";
+  if (/^(https?:)?\/\//i.test(s) || /^(mailto:|tel:|#)/i.test(s)) return s;
+  return wxLangInternalHref(s);
+};
+const dogru = (v, d) => (v === undefined || v === null || v === "") ? d : !(v === false || v === "false" || v === 0 || v === "0");
+const ikonAd = (v) => String(v ?? "").trim().replace(/[^a-z0-9_]/gi, "");
+const satirlar = (s) => esc(s).replace(/\r?\n/g, "<br />");
+const { desing: des = {} } = json;
+const setting = webmakerdata?.setting ?? {};
+const veri = Array.isArray(json.data) ? json.data : [];
 
-function s2Esc(s) {
-  return String(s == null ? "" : s)
-    .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
-}
-function s2Pick(v) { return wmPickLang(v, s2Lang); }
-function s2Bicim(n, ondalik) {
-  try {
-    return new Intl.NumberFormat(s2Lang + "-u-nu-latn", { minimumFractionDigits: ondalik, maximumFractionDigits: ondalik }).format(n);
-  } catch (e) { return n.toFixed(ondalik); }
-}
+const sayilar = veri.map((o) => {
+  const ham = String((o && o.sayi) ?? "").trim().replace(/\s/g, "").replace(",", ".");
+  const deger = Number(ham);
+  if (!ham || !Number.isFinite(deger)) return null;
+  const ondalik = (ham.split(".")[1] || "").length;
+  return { deger, ondalik: Math.min(3, ondalik), onek: pick(o.onek).trim(), sonek: pick(o.sonek).trim(), etiket: pick(o.etiket).trim(), aciklama: pick(o.aciklama).trim() };
+}).filter((o) => o && o.etiket);
 
-var s2Items = Array.isArray(json.data) ? json.data : [];
-var s2Stil = String(s2Des.stil || "serit");
-if (s2Stil !== "serit" && s2Stil !== "kartli" && s2Stil !== "ayrik-cizgili") { s2Stil = "serit"; }
-var s2Desen = String(s2Des.desen || "noktalar");
-if (s2Desen !== "noktalar" && s2Desen !== "cizgiler" && s2Desen !== "yok") { s2Desen = "noktalar"; }
-var s2Sure = parseInt(s2Des.sure, 10);
-if (!isFinite(s2Sure)) { s2Sure = 1000; }
+const bicim = (d, ondalik) => {
+  try { return new Intl.NumberFormat(json.lang, { minimumFractionDigits: ondalik, maximumFractionDigits: ondalik }).format(d); } catch (e) { return d.toFixed(ondalik); }
+};
 
-var s2Html = "";
-var s2N = 0;
-var s2i;
-for (s2i = 0; s2i < s2Items.length; s2i++) {
-  var it = s2Items[s2i] || {};
-  var deger = parseFloat(it.deger);
-  var etiket = s2Pick(it.etiket);
-  if (!isFinite(deger) || !etiket) { continue; }
-  s2N++;
-  var ondalik = parseInt(it.ondalik, 10);
-  if (!isFinite(ondalik) || ondalik < 0) { ondalik = 0; }
-  if (ondalik > 3) { ondalik = 3; }
-  var onek = it.onek != null ? String(it.onek) : "";
-  var sonek = it.sonek != null ? String(it.sonek) : "";
-  var aciklama = s2Pick(it.aciklama);
-  s2Html += '<li class="modulex-s2-item">' +
-    (it.ikon ? '<span class="modulex-s2-ikon" aria-hidden="true"><span class="material-symbols-outlined">' + s2Esc(it.ikon) + "</span></span>" : "") +
-    '<div class="modulex-s2-deger"><bdi dir="ltr">' +
-    (onek ? '<span class="modulex-s2-onek">' + s2Esc(onek) + "</span>" : "") +
-    '<span class="modulex-s2-sayi" data-s2-hedef="' + deger + '" data-s2-ondalik="' + ondalik + '">' + s2Esc(s2Bicim(deger, ondalik)) + "</span>" +
-    (sonek ? '<span class="modulex-s2-sonek">' + s2Esc(sonek) + "</span>" : "") +
-    "</bdi></div>" +
-    '<p class="modulex-s2-etiket">' + s2Esc(etiket) + "</p>" +
-    (aciklama ? '<p class="modulex-s2-aciklama">' + s2Esc(aciklama) + "</p>" : "") +
-    "</li>";
-}
-var s2Count = Math.max(1, Math.min(5, s2N));
+const sdvSayilar = sayilar.map((s, i) =>
+  `<div class="modulex-sdv-oge" style="--sdv-sira:${i}">`
+  + `<p class="modulex-sdv-sayi"><span class="modulex-sdv-onek">${esc(s.onek)}</span><span class="modulex-sdv-deger" data-hedef="${s.deger}" data-ondalik="${s.ondalik}">${esc(bicim(s.deger, s.ondalik))}</span><span class="modulex-sdv-sonek">${esc(s.sonek)}</span></p>`
+  + `<p class="modulex-sdv-etiket">${esc(s.etiket)}</p>`
+  + (s.aciklama ? `<p class="modulex-sdv-aciklama">${satirlar(s.aciklama)}</p>` : "")
+  + "</div>").join("");
 
-var s2Title = s2Pick(s2Des.title);
-var s2Desc = s2Pick(s2Des.description);
-var s2Head = "";
-if (s2Title || s2Desc) {
-  s2Head = '<header class="modulex-s2-head">' +
-    (s2Title ? '<h2 class="modulex-s2-title">' + s2Esc(s2Title) + "</h2>" : "") +
-    (s2Desc ? '<p class="modulex-s2-desc">' + s2Esc(s2Desc) + "</p>" : "") + "</header>";
-}
+const ust = pick(des.ust).trim();
+const baslik = pick(des.baslik).trim();
+const metin = pick(des.metin).trim();
+const stil = ["cizgi", "koyu"].includes(String(des.stil || "").trim()) ? String(des.stil).trim() : "cizgi";
 
-html = html.replace(/\{\{s2class\}\}/g, function () { return " modulex-s2-" + s2Stil + " modulex-s2-desen-" + s2Desen; });
-html = html.replace(/\{\{s2dil\}\}/g, function () { return s2Esc(s2Lang); });
-html = html.replace(/\{\{s2sure\}\}/g, function () { return String(s2Sure); });
-html = html.replace(/\{\{s2vars\}\}/g, function () { return "--s2-n:" + s2Count; });
-html = html.replace(/\{\{s2head\}\}/g, function () { return s2Head; });
-html = html.replace(/\{\{s2items\}\}/g, function () { return s2Html; });
+html = html
+  .replaceAll("{{sdvsinif}}", () => ` modulex-sdv--${stil}` + (ust || baslik || metin ? "" : " modulex-sdv--bassiz") + ` modulex-sdv--n${Math.min(4, sayilar.length)}`)
+  .replaceAll("{{sdvust}}", () => (ust ? `<p class="modulex-sdv-ust">${esc(ust)}</p>` : ""))
+  .replaceAll("{{sdvbaslik}}", () => (baslik ? `<h2 class="modulex-sdv-baslik" id="sdv-{{id}}-baslik">${esc(baslik)}</h2>` : ""))
+  .replaceAll("{{sdvmetin}}", () => (metin ? `<p class="modulex-sdv-metin">${satirlar(metin)}</p>` : ""))
+  .replaceAll("{{sdvetiket}}", () => (baslik ? 'aria-labelledby="sdv-{{id}}-baslik"' : ""))
+  .replaceAll("{{sdvsayilar}}", () => sdvSayilar);
+if (!sayilar.length) html = "";
